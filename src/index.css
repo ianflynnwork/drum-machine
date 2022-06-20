@@ -1,0 +1,20 @@
+#drum-machine {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    background-color: aqua;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.pad-wrapper {
+    background-color: white;
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.drum-pad {
+    width: 33%;
+    height: 33%;
+}
