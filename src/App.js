@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Display from "./comps/Display";
 import DrumPad from "./comps/DrumPad";
+import VolumeBar from "./comps/VolumeBar";
 
 
 function App() {
@@ -25,15 +26,18 @@ function App() {
 
   return (
     <div id='drum-machine'>
-      
-      {drumData.map(pad => (
-        <DrumPad 
-          pad={ pad }
-          key={ pad.id }
-          setSoundText={ setSoundText }
-        />
-      ))}
+      <div className="pad-box">
+        {drumData.map(pad => (
+          <DrumPad 
+            pad={ pad }
+            key={ pad.id }
+            setSoundText={ setSoundText }
+          />
+        ))}
+      </div>
+      <div className="title">Mix-Master</div>
        <Display soundText={ soundText }/>
+       <VolumeBar setSoundText={ setSoundText }/>
     </div>
   );
 }
