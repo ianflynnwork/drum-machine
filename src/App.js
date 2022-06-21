@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div id='drum-machine'>
-      <Display soundText={ soundText }/>
+      
       {drumData.map(pad => (
         <DrumPad 
           pad={ pad }
@@ -33,7 +33,7 @@ function App() {
           setSoundText={ setSoundText }
         />
       ))}
-      
+       <Display soundText={ soundText }/>
     </div>
   );
 }
