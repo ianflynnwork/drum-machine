@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import Display from "./comps/Display";
 import DrumPad from "./comps/DrumPad";
 
 
 function App() {
-  const [soundText, setSoundText] = useState('');
+  const [soundText, setSoundText] = useState();
   
   const drumData = [
     {keyCode: 81, id: 'snare1', letter: 'Q', src: 'https://drumsoundz.com/Snare1.wav'},
@@ -24,11 +25,11 @@ function App() {
 
   return (
     <div id='drum-machine'>
-      <div id="display"></div>
+      <Display soundText={ soundText }/>
       {drumData.map(pad => (
         <DrumPad 
-          pad={pad}
-          key={pad.id}
+          pad={ pad }
+          key={ pad.id }
           setSoundText={ setSoundText }
         />
       ))}
