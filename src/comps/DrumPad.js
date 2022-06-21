@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 
 
-function DrumPad({ pad, setSoundText }) {
+function DrumPad({ pad, setSoundText, volumeLevel }) {
     
     useEffect(() => {
         document.addEventListener('keydown', handleKeyPress);
@@ -18,6 +18,7 @@ function DrumPad({ pad, setSoundText }) {
     }
     const playSound = () => {
         const audioTag = document.getElementById(pad.letter);
+        audioTag.volume = volumeLevel;
         audioTag.play();
         setSoundText(pad.id)
     }

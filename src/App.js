@@ -6,7 +6,7 @@ import VolumeBar from "./comps/VolumeBar";
 
 function App() {
   const [soundText, setSoundText] = useState();
-  
+  const [volumeLevel, setVolumeLevel] = useState(0.5)
   const drumData = [
     {keyCode: 81, id: 'snare1', letter: 'Q', src: 'https://drumsoundz.com/Snare1.wav'},
     {keyCode: 87, id: 'snare2', letter: 'W', src: 'https://drumsoundz.com/Snare2.wav'},
@@ -32,12 +32,13 @@ function App() {
             pad={ pad }
             key={ pad.id }
             setSoundText={ setSoundText }
+            volumeLevel={ volumeLevel }
           />
         ))}
       </div>
       <div className="title">Mix-Master</div>
        <Display soundText={ soundText }/>
-       <VolumeBar setSoundText={ setSoundText }/>
+       <VolumeBar setSoundText={ setSoundText } volumeLevel={ volumeLevel } setVolumeLevel={ setVolumeLevel }/>
     </div>
   );
 }
