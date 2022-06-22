@@ -16,23 +16,24 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 200px;
-    box-sizing: border-box;
+    box-sizing: content-box;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: 5px solid brown;
 }
 
 /* pads box */
 
 .pad-box {
-    width: 300px;
-    height: 400px;
+    width: 390px;
+    height: 390px;
     display: flex;
     flex-wrap: wrap;
     cursor: pointer;
     background-color: blueviolet;
     justify-content: space-evenly;
-   
+    border: 5px solid green;
 
 }
 .drum-pad {
@@ -52,17 +53,22 @@ body {
     text-align: center;
 }
 
-/* display styling */
+/* display stylings */
 #display {
     width: 150px;
     height: 40px;
-    background-color: antiquewhite;
+    background-color: black;
+    color: red;
+    margin: 5px auto;
+    font-size: 1.4rem;
 }
 
-/* slider stylings */
+/* volume stylings */
 .slide-container {
-    width: 40%;
+    width: 90%;
     background-color: pink;
+    margin: 10px auto;
+    box-sizing: border-box;
 }
 .slider {
     -webkit-appearance: none;
@@ -85,6 +91,4 @@ body {
     height: 25px;
     background: yellow;
     cursor: pointer;
-    
-
 }
