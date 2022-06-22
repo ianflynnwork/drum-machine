@@ -23,12 +23,7 @@ function App() {
     //{id: 'sfx3', letter: 'T', src: 'https://drumsoundz.com/Tom%20H.wav'},
     //{id: 'sfx4', letter: 'G', src: 'https://drumsoundz.com/Tom%20L.wav'}
   ];
-  const newArray = drumData.map(pad => (
-    
-  ))
 
-  console.log(newArray);
-  
 
   return (
     <div id='drum-machine'>
@@ -42,14 +37,16 @@ function App() {
           />
         ))}
       </div>
-      <div className="title">Mix-Master</div>
+      <div className="controls-box">
+        <div className="title">Mix-Master</div>
           <Display soundText={ soundText }/>
           <VolumeBar 
-              setSoundText={ setSoundText } 
-              volumeLevel={ volumeLevel } 
-              setVolumeLevel={ setVolumeLevel }
-              drumData={ drumData }
+            setSoundText={ setSoundText } 
+            volumeLevel={ volumeLevel } 
+            setVolumeLevel={ setVolumeLevel }
+            drumData={ drumData }
           />
+      </div>
     </div>
   );
 }

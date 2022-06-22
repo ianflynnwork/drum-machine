@@ -10,6 +10,7 @@ function DrumPad({ pad, setSoundText, volumeLevel }) {
     const playSound = () => {
         const audioTag = document.getElementById(pad.letter);
         audioTag.volume = volumeLevel;
+        audioTag.currentTime = 0;
         audioTag.play();
         setSoundText(pad.id)
     }
@@ -26,7 +27,6 @@ function DrumPad({ pad, setSoundText, volumeLevel }) {
         id={pad.id}
         onClick={playSound}
         >
-        
             <p>{pad.letter}</p>
             <audio 
                 src={pad.src} 

@@ -2,46 +2,54 @@
 
 /* envelope styling */
 #drum-machine {
-    text-align: center;
-    width: 90%;
-    max-width: 750px;
+    width: 750px;
     height: 400px;
-    background-color: red;
-    border: 2px solid black; 
-    padding: 10px;
+    background-color: red; 
     margin-left: auto;
     margin-right: auto;
     margin-top: 200px;
-
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: row;
 }
 
-/* pads styling */
+/* pads box */
+
 .pad-box {
     width: 400px;
-    height: 350px;
+    height: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 10px 10px;
     float: left;
     cursor: pointer;
-    margin-top: 30px;
-    margin-left: 10px;
-
+    padding: 10px;
 }
 .drum-pad {
     background-color: aqua;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* controls box */
+
+.controls-box {
+    width: 350px;
+}
+
 /* display styling */
 #display {
     width: 150px;
     height: 40px;
-    display: inline-block;
     background-color: antiquewhite;
 }
+
 /* slider stylings */
 .slide-container {
-    width: 100%;
+    width: 40%;
+    background-color: pink;
 }
 .slider {
     -webkit-appearance: none;
