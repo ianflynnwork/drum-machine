@@ -1,8 +1,7 @@
 
-
 function VolumeBar({ setSoundText, volumeLevel, setVolumeLevel }) {
-    const volumeChanger = () => {
-        
+    const volumeChanger = (e) => {
+        setVolumeLevel(e.target.value)
     }
     return (
         <div className="slide-container">
